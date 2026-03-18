@@ -19,7 +19,7 @@ finish-args:
   - --share=network
 
 cleanup:
-  - "*.a"
+  - '*.a'
   - /include
   - /lib/cmake
   - /lib/pkgconfig
@@ -33,16 +33,16 @@ modules:
   - name: game-music-emu
     buildsystem: cmake-ninja
     config-opts:
-    - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_BUILD_TYPE=Release
     sources:
-    - type: archive
-      url: https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.4.tar.gz
-      sha256: f2360feb5a32ace226c583df4faf6eff74145c81264aaea11e17a1af2f6f101a
-      x-checker-data:
-        type: anitya
-        project-id: 866
-        stable-only: true
-        url-template: https://github.com/libgme/game-music-emu/archive/refs/tags/$version.tar.gz
+      - type: archive
+        url: https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.4.tar.gz
+        sha256: f2360feb5a32ace226c583df4faf6eff74145c81264aaea11e17a1af2f6f101a
+        x-checker-data:
+          type: anitya
+          project-id: 866
+          stable-only: true
+          url-template: https://github.com/libgme/game-music-emu/archive/refs/tags/$version.tar.gz
 
   - name: zmusic
     buildsystem: cmake-ninja
@@ -50,7 +50,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://github.com/UZDoom/ZMusic/archive/1.3.0.tar.gz
+        url: https://github.com/zdoom/ZMusic/archive/1.3.0.tar.gz
         sha256: 2eccd41e1cc9b38b3729ab94d65635719b2adc916de4ca9f8399ebceaee89f7f
         x-checker-data:
           type: anitya
