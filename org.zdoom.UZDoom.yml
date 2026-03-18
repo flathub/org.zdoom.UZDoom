@@ -1,4 +1,4 @@
-eapp-id: org.zdoom.UZDoom
+app-id: org.zdoom.UZDoom
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 runtime-version: '25.08'
