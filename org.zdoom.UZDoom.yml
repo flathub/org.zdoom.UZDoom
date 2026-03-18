@@ -44,3 +44,5 @@ modules:
           type: json
           url: https://api.github.com/repos/UZDoom/UZDoom/git/refs/tags
           tag-query: last(.[] | select((.ref | contains("-pre")) or (.ref | contains("-rc"))) | .ref | sub("refs/tags/"; ""))
+    post-install:
+      - desktop-file-edit --set-key=Name --set-value="UZDoom beta" /app/share/applications/${FLATPAK_ID}.desktop
