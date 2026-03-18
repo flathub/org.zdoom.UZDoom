@@ -1,4 +1,4 @@
-app-id: org.zdoom.UZDoom
+eapp-id: org.zdoom.UZDoom
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 runtime-version: '25.08'
@@ -50,13 +50,13 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://github.com/zdoom/ZMusic/archive/1.3.0.tar.gz
+        url: https://github.com/UZDoom/ZMusic/archive/1.3.0.tar.gz
         sha256: 2eccd41e1cc9b38b3729ab94d65635719b2adc916de4ca9f8399ebceaee89f7f
         x-checker-data:
           type: anitya
           project-id: 153600
           stable-only: true
-          url-template: https://github.com/zdoom/ZMusic/archive/$version.tar.gz
+          url-template: https://github.com/UZDoom/ZMusic/archive/$version.tar.gz
 
   - name: uzdoom
     buildsystem: cmake-ninja
