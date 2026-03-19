@@ -17,6 +17,10 @@ finish-args:
   - --device=all
   # Allow network for multiplayer gameplay
   - --share=network
+  # On order to load WADs from user's game libraries
+  - --filesystem=~/.var/app/com.valvesoftware.Steam/data/Steam/steamapps:ro
+  - --filesystem=~/.local/share/Steam/steamapps:ro
+  - --filesystem=~/snap/steam/common/.local/share/Steam/steamapps:ro
 
 cleanup:
   - "*.a"
