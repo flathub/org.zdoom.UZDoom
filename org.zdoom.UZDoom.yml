@@ -39,6 +39,7 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_CXX_FLAGS=-DSHARE_DIR=\"/app/share\"
+      - -DBUILD_FLATPAK=ON
     sources:
       - type: git
         url: https://github.com/UZDoom/UZDoom
