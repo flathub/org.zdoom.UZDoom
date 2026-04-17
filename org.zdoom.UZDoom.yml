@@ -43,11 +43,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/UZDoom/UZDoom
-        commit: 92788309eabc41076b23bc6963e30d9059773616
-        disable-shallow-clone: true
+        tag: x-flathub-beta
+        commit: c0522f60b133b8c3dce7626fed499c0ab7788acc
         x-checker-data:
-          type: json
-          url: https://api.github.com/repos/UZDoom/UZDoom/tags
-          commit-query: .[] | select(.name == "x-flathub-beta") | .commit.sha
+          type: git
+          tag-pattern: "(x-flathub-beta)"
     post-install:
       - desktop-file-edit --set-key=Name --set-value="UZDoom Beta" /app/share/applications/${FLATPAK_ID}.desktop
