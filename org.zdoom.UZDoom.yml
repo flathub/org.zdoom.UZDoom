@@ -23,7 +23,7 @@ finish-args:
   - --filesystem=~/snap/steam/common/.local/share/Steam/steamapps:ro
 
 cleanup:
-  - "*.a"
+  - '*.a'
   - /include
   - /lib/cmake
   - /lib/pkgconfig
@@ -44,10 +44,10 @@ modules:
       - type: git
         url: https://github.com/UZDoom/UZDoom
         tag: x-flathub-beta
-        commit: c0522f60b133b8c3dce7626fed499c0ab7788acc
+        commit: 0e3cf203856a8759ccb7044f44c47f8530cc3734
         disable-shallow-clone: true
         x-checker-data:
           type: git
-          tag-pattern: "(x-flathub-beta)"
+          tag-pattern: (x-flathub-beta)
     post-install:
       - desktop-file-edit --set-key=Name --set-value="UZDoom Beta" /app/share/applications/${FLATPAK_ID}.desktop
