@@ -12,6 +12,7 @@ finish-args:
   - --device=dri
   # Audio
   - --socket=pulseaudio
+  - --filesystem=xdg-run/pipewire-0
   # Controller support - change to device=input once Flatpak 1.14 is EOL.
   # https://discourse.flathub.org/t/support-for-device-input/6645
   - --device=all
