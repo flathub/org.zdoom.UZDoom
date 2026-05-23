@@ -45,7 +45,7 @@ modules:
       - type: git
         url: https://github.com/UZDoom/UZDoom
         tag: x-flathub-beta
-        commit: 0e3cf203856a8759ccb7044f44c47f8530cc3734
+        commit: bd42973cfeeb0bd0a5897a4c3416aac38e27bee0
         disable-shallow-clone: true
         x-checker-data:
           type: git
