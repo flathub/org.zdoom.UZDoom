@@ -37,6 +37,7 @@ modules:
 
   - name: uzdoom
     buildsystem: cmake-ninja
+    builddir: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_CXX_FLAGS=-DSHARE_DIR=\"/app/share\"
