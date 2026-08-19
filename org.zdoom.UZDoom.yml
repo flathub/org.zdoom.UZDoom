@@ -53,3 +53,4 @@ modules:
           tag-pattern: (x-flathub-beta)
     post-install:
       - desktop-file-edit --set-key=Name --set-value="UZDoom Beta" /app/share/applications/${FLATPAK_ID}.desktop
+      - sed -i '/<magic>/,/<\/magic>/d; /<magic-deleteall \/>/d' /app/share/mime/packages/${FLATPAK_ID}-mime.xml
