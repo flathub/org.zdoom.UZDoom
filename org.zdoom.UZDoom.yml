@@ -1,7 +1,7 @@
 app-id: org.zdoom.UZDoom
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-runtime-version: '25.08'
+runtime-version: '26.08'
 command: uzdoom
 
 finish-args:
@@ -46,7 +46,7 @@ modules:
       - type: git
         url: https://github.com/UZDoom/UZDoom
         tag: x-flathub-beta
-        commit: 4ca590945524330d94530c0558c8d547d457e16c
+        commit: 688d77b49776730c14b4ccdc5b32507daadbd717
         disable-shallow-clone: true
         x-checker-data:
           type: git
