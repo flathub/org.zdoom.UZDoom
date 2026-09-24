@@ -45,8 +45,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/UZDoom/UZDoom
-        tag: 5.0.1
-        commit: b92a83674b76c295a51c2ca21ee9b3085526fecb
+        tag: 5.0.3
+        commit: 7910df7102033fd7754a317f3254f24101135926
         disable-shallow-clone: true
         x-checker-data:
           type: git
