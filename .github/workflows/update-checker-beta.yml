@@ -19,6 +19,9 @@ jobs:
         with:
           ref: ${{ matrix.branch }}
 
+      - name: Fix git permission issues
+        run: git config --global --add safe.directory /github/workspace
+
       - uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
         env:
           GIT_AUTHOR_NAME: Flatpak External Data Checker
