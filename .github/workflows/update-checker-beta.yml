@@ -19,12 +19,6 @@ jobs:
         with:
           ref: ${{ matrix.branch }}
 
-      - name: Fix git permission issues
-        run: |
-          # stolen from https://stackoverflow.com/questions/79732325/why-can-i-not-override-dubious-ownership-for-a-github-workflow
-          GIT_GLOBAL="/home/runner/work/_temp/_github_home/.gitconfig"
-          git config --file "$GIT_GLOBAL" --add safe.directory "$GITHUB_WORKSPACE"
-
       - uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
         env:
           GIT_AUTHOR_NAME: Flatpak External Data Checker
@@ -33,5 +27,11 @@ jobs:
           GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Workaround for "dubious ownership" issue introduced 2026-11-15
+          # https://github.com/flathub-infra/flatpak-external-data-checker/issues/654
+          GIT_CONFIG_COUNT: 1
+          GIT_CONFIG_KEY_0: safe.directory
+          GIT_CONFIG_VALUE_0: '*'
+
         with:
           args: --update --never-fork org.zdoom.UZDoom.yml
