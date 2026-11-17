@@ -20,7 +20,10 @@ jobs:
           ref: ${{ matrix.branch }}
 
       - name: Fix git permission issues
-        run: git config --global --add safe.directory /github/workspace
+        run: |
+          # stolen from https://stackoverflow.com/questions/79732325/why-can-i-not-override-dubious-ownership-for-a-github-workflow
+          GIT_GLOBAL="/home/runner/work/_temp/_github_home/.gitconfig"
+          git config --file "$GIT_GLOBAL" --add safe.directory "$GITHUB_WORKSPACE"
 
       - uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
         env:
